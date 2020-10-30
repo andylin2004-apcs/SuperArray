@@ -15,8 +15,12 @@ class SuperArray{
     for (int i = 0; i<size; i++){
       if(data[i] == ""){
         data[i] = element;
+        return true;
       }
     }
+    resize()
+    data[size] = element;
+    return false;
   }
 
   public String get(int index){
@@ -34,7 +38,7 @@ class SuperArray{
     size += 1;
     data = new String[size];
     for (int i = 0; i<size; i++){
-      data[i] = element;
+      data[i] = old[i];
     }
   }
 }
