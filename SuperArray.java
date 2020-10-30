@@ -21,7 +21,8 @@ class SuperArray{
     }
     resize();
     data[size] = element;
-    return false;
+    size++;
+    return true;
   }
 
   public String get(int index){
