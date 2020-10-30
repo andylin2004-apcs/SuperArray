@@ -28,4 +28,13 @@ class SuperArray{
     data[index] = element;
     return replaced;
   }
+
+  private void resize(){
+    String[] old = data;
+    size += 1;
+    data = new String[size];
+    for (int i = 0; i<size; i++){
+      data[i] = element;
+    }
+  }
 }
