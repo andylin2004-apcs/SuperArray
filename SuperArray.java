@@ -6,4 +6,9 @@ class SuperArray{
     data = new String[10];
     size = 10;
   }
+
+  public int size(){
+    return size;
+  }
+  
 }
