@@ -4,7 +4,7 @@ class SuperArray{
 
   public SuperArray(){
     data = new String[10];
-    size = 10;
+    size = 0;
   }
 
   public int size(){
@@ -15,6 +15,7 @@ class SuperArray{
     for (int i = 0; i<size; i++){
       if(data[i] == ""){
         data[i] = element;
+        size++
         return true;
       }
     }
@@ -35,10 +36,10 @@ class SuperArray{
 
   private void resize(){
     String[] old = data;
-    size += 1;
-    data = new String[size];
-    for (int i = 0; i<size; i++){
+    data = new String[old.length+10];
+    for (int i = 0; i<data.length; i++){
       data[i] = old[i];
+      size++;
     }
   }
 }
