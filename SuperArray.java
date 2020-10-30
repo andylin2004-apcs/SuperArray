@@ -13,13 +13,19 @@ class SuperArray{
 
   public boolean add(String element){
     for (int i = 0; i<size; i++){
-      if(data[i] == nil){
-        data[i] == element;
+      if(data[i] == ""){
+        data[i] = element;
       }
     }
   }
 
   public String get(int index){
     return data[index];
+  }
+
+  public String set(int index, String element){
+    String replaced = data[index];
+    data[index] = element;
+    return replaced;
   }
 }
