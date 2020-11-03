@@ -74,4 +74,25 @@ class SuperArray{
     data = new String[InitialCapacity];
     size = 0;
   }
+
+   public void add(int index, String element){
+     String temp = data[index];
+     data[index] = element;
+     for (int i = index+1; i<size+1; i++){
+       data[i] = temp;
+       temp = data[i+1];
+       if (i > data.length){
+         resize();
+       }
+     }
+   }
+
+   public String remove(int index){
+     for (int i = index; i < size-1; i++){
+       data[i] = data[i+1];
+     }
+     return toString();
+   }
+
+
 }
