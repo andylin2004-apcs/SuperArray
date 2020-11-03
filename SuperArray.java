@@ -47,12 +47,7 @@ class SuperArray{
   }
 
   public boolean isEmpty(){
-    for (int i = 0; i<data.length; i++){
-      if(data[i] != null){
-        return false;
-      }
-    }
-    return true;
+    return size == 0;
   }
 
   public String toString(){
@@ -67,7 +62,7 @@ class SuperArray{
   }
 
   public boolean contains(String s){
-    for (int i = 0; i<data.length; i++){
+    for (int i = 0; i<size; i++){
       if(data[i].equals(s)){
         return true;
       }
