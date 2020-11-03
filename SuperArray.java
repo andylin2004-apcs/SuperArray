@@ -88,6 +88,7 @@ class SuperArray{
      for (int i = index; i < size-1; i++){
        data[i] = data[i+1];
      }
+     size--;
      return toString();
    }
 
