@@ -45,4 +45,24 @@ class SuperArray{
       data[i] = old[i];
     }
   }
+
+  public boolean isEmpty(){
+    for (int i = 0; i<data.length; i++){
+      if(data[i] != null){
+        return false;
+      }
+    }
+    return true;
+  }
+
+  public String toString(){
+    String result = "{";
+    for (int i = 0; i < size; i++){
+      result += data[i];
+      if (i < size - 1){
+        result += ", ";
+      }
+    }
+    return result;
+  }
 }
