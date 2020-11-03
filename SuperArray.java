@@ -51,14 +51,14 @@ class SuperArray{
   }
 
   public String toString(){
-    String result = "{";
+    String result = "[";
     for (int i = 0; i < size; i++){
       result += data[i];
       if (i < size - 1){
         result += ", ";
       }
     }
-    return result;
+    return result+"]";
   }
 
   public boolean contains(String s){
