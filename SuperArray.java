@@ -76,15 +76,17 @@ class SuperArray{
   }
 
    public void add(int index, String element){
-     String temp = data[index];
-     data[index] = element;
-     for (int i = index+1; i<size+1; i++){
-       data[i] = temp;
-       temp = data[i+1];
-       if (i > data.length){
-         resize();
-       }
+     String replaceWith = element;
+     String temp;
+     if (size+1 >= data.length){
+       resize();
      }
+     for (int i = index; i<size+1; i++){
+       temp = data[i];
+       data[i] = replaceWith;
+       replaceWith = temp;
+     }
+     size++;
    }
 
    public String remove(int index){
