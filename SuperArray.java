@@ -12,14 +12,9 @@ class SuperArray{
   }
 
   public boolean add(String element){
-    for (int i = 0; i<data.length; i++){
-      if(data[i] == null){
-        data[i] = element;
-        size++;
-        return true;
-      }
+    if (size+1 >= data.length){
+      resize();
     }
-    resize();
     data[size] = element;
     size++;
     return true;
@@ -94,7 +89,9 @@ class SuperArray{
        data[i] = data[i+1];
      }
      data[size] = null;
-     size--;
+     if (data[size] == null){
+       return "the last value is null but then " + toString();
+     }
      return toString();
    }
 
