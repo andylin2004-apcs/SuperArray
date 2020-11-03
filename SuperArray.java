@@ -40,7 +40,7 @@ class SuperArray{
     for (int i = 0; i<data.length; i++){
       old[i] = data[i];
     }
-    data = new String[old.length+10];
+    data = new String[old.length*2];
     for (int i = 0; i<old.length; i++){
       data[i] = old[i];
     }
