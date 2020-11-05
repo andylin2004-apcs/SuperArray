@@ -94,13 +94,14 @@ class SuperArray{
      for (int i = index; i < size-1; i++){
        data[i] = data[i+1];
      }
+     data[size] = null;
      size--;
      return removed;
    }
 
    public int indexOf(String s){
      for (int i = 0; i<size; i++){
-       if (data[i] == s){
+       if (data[i].equals(s)){
          return i;
        }
      }
@@ -113,5 +114,14 @@ class SuperArray{
        result[i] = data[i];
      }
      return result;
+   }
+
+   public int lastIndexOf(String value){
+     for (int i = size-1; i >= 0; i++){
+       if (data[i].equals(value)){
+         return i;
+       }
+     }
+     return -1;
    }
 }
