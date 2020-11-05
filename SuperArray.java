@@ -90,11 +90,12 @@ class SuperArray{
    }
 
    public String remove(int index){
+     String removed = data[index];
      for (int i = index; i < size-1; i++){
        data[i] = data[i+1];
      }
      size--;
-     return toString();
+     return removed;
    }
 
    public int indexOf(String s){
