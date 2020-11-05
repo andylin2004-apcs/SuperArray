@@ -124,4 +124,13 @@ class SuperArray{
      }
      return -1;
    }
+
+   public boolean equals(SuperArray other){
+     for (int i = 0; i < size; i++){
+       if (!other.get(i).equals(data[i])){
+         return false;
+       }
+     }
+     return true;
+   }
 }
