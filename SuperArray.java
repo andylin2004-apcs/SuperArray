@@ -71,6 +71,9 @@ class SuperArray{
   }
 
   public SuperArray(int InitialCapacity){
+    if (InitialCapacity < 0){
+      throw new IllegalArgumentException("The input entered " + InitialCapacity + "is negative. It must be at least 0.");
+    }
     data = new String[InitialCapacity];
     size = 0;
   }
