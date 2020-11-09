@@ -85,7 +85,7 @@ class SuperArray{
   }
 
    public void add(int index, String element){
-     if (index < 0 || index >= size()){
+     if (index < 0 || index > size()){
        throw new IndexOutOfBoundsException("Index " + index + "out of bounds.");
      }
      String replaceWith = element;
@@ -102,6 +102,9 @@ class SuperArray{
    }
 
    public String remove(int index){
+     if (index < 0 || index >= size()){
+       throw new IndexOutOfBoundsException("Index " + index + "out of bounds.");
+     }
      String removed = data[index];
      for (int i = index; i < size-1; i++){
        data[i] = data[i+1];
